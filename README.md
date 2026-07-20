@@ -1,4 +1,4 @@
-# CodeAlpha AWS CI/CD DevOps Project 🚀
+# CodeAlpha AWS CI/CD DevOps Project
 
 ## Overview
 
