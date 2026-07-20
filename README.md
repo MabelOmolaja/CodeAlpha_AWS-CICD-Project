@@ -7,22 +7,7 @@ This project demonstrates the implementation of a CI/CD pipeline for deploying a
 The goal of this project was to automate the process of building a Docker image, storing it in a container registry, and deploying the application to an AWS EC2 instance.
 
 ## Architecture
-
-The deployment workflow follows this process:
-
-Developer
-↓
-GitHub Repository
-↓
-GitHub Actions CI/CD Pipeline
-↓
-Docker Image Build
-↓
-Amazon Elastic Container Registry (ECR)
-↓
-AWS EC2 Instance
-↓
-Docker Container Running Web Application
+<img width="1280" height="430" alt="architecture_diagram" src="https://github.com/user-attachments/assets/82ae1a0d-05b8-489a-978c-07e5d923fbf3" />
 
 ## Technologies Used
 
