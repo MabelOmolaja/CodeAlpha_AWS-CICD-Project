@@ -56,4 +56,3 @@ jobs:
           script: |
             cd aws-cicd-project
             ./deploy.sh
-
