@@ -13,6 +13,7 @@ The goal of this project was to automate the process of building a Docker image,
 
 * AWS EC2
 * Amazon Elastic Container Registry (ECR)
+* AWS CloudWatch
 * Docker
 * GitHub Actions
 * Linux
@@ -21,9 +22,10 @@ The goal of this project was to automate the process of building a Docker image,
 
 ## Project Implementation Steps
 
-### Step 1: Created the Web Application
+### Step 1: Create the Web Application
+<img width="1280" height="760" alt="Live_website" src="https://github.com/user-attachments/assets/3477c352-5c0d-413b-9808-f5bd9823ba73" />
 
-Created a simple HTML website to demonstrate the deployment process.
+I created a simple HTML website to demonstrate the deployment process.
 
 The application contains:
 
@@ -34,14 +36,14 @@ The application contains:
 
 ## Step 2: Containerized the Application Using Docker
 
-Created a Dockerfile to package the website into a Docker image.
+I created a Dockerfile to package the website into a Docker image.
 
 The Docker image was built locally on an AWS EC2 Linux environment because my personal laptop had compatibility limitations with Docker.
 
 Commands used:
 
 ```bash
-docker build -t aws-cicd-project .
+docker build -t aws-cicd-project.
 ```
 
 The container was tested successfully by running it on EC2.
@@ -51,8 +53,9 @@ docker run -d -p 80:80 --name codealpha-web aws-cicd-project
 ```
 
 ## Step 3: Created Amazon ECR Repository
+<img width="1280" height="748" alt="ECR_Repository" src="https://github.com/user-attachments/assets/f96e443e-b160-4570-9242-855e382f3f16" />
 
-Created an Amazon Elastic Container Registry (ECR) repository to store Docker images.
+I created an Amazon Elastic Container Registry (ECR) repository to store Docker images.
 
 The Docker image was tagged and pushed to ECR.
 
@@ -67,8 +70,9 @@ docker push <ECR-Repository-URI>
 ```
 
 ## Step 4: Configured GitHub Repository
+<img width="1280" height="644" alt="GitHub_Repository" src="https://github.com/user-attachments/assets/3824ab5a-a779-4510-b20a-84eef50b6b9e" />
 
-Uploaded the project source code to GitHub.
+I uploaded the project source code to GitHub.
 
 Repository structure:
 
@@ -86,7 +90,7 @@ CodeAlpha_AWS-CICD-Project
 
 ## Step 5: Created CI/CD Pipeline Using GitHub Actions
 
-Created a GitHub Actions workflow to automate:
+I created a GitHub Actions workflow to automate:
 
 1. Checking out the source code
 2. Configuring AWS credentials
@@ -100,7 +104,7 @@ The workflow is triggered whenever changes are pushed to the main branch.
 
 ## Step 6: Automated Deployment to EC2
 
-Configured secure SSH access between GitHub Actions and the EC2 instance.
+I configured secure SSH access between GitHub Actions and the EC2 instance.
 
 The deployment script:
 
@@ -128,6 +132,7 @@ curl localhost
 Accessing the application through the EC2 public IP address.
 
 ## Challenges and Troubleshooting
+<img width="1280" height="677" alt="Challenges_and_Troubleshooting" src="https://github.com/user-attachments/assets/460dadf1-e44d-4583-8a40-dd2919cacdca" />
 
 During implementation, several real-world DevOps issues were resolved:
 
@@ -166,6 +171,4 @@ The complete workflow now includes:
 ## Author
 
 Mabel Omolaja
-
 Cloud & DevOps Engineer (Aspiring) 
-
