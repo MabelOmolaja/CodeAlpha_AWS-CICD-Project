@@ -154,9 +154,33 @@ During implementation, several real-world DevOps issues were resolved:
 
 These troubleshooting steps helped strengthen understanding of cloud infrastructure, automation, and deployment workflows.
 
+## Monitoring and Observability
+
+Amazon CloudWatch was configured to monitor the EC2 instance hosting the containerized application.
+
+CloudWatch metrics provide visibility into infrastructure performance, including:
+
+* CPU utilisation
+* Network activity
+* Instance health status
+* Resource performance trends
+
+The monitoring dashboard helps track the application's hosting environment and supports troubleshooting by identifying potential performance issues.
+
+## Updated Project Workflow
+
+The complete workflow now includes:
+
+1. Developer pushes code changes to GitHub
+2. GitHub Actions automatically builds the Docker image
+3. Docker image is pushed to Amazon ECR
+4. GitHub Actions connects securely to EC2
+5. The updated container is deployed
+6. CloudWatch monitors EC2 performance metrics
+
 ## Author
 
 Mabel Omolaja
 
-AWS Cloud and DevOps Journey
+Cloud & DevOps Engineer (Aspiring) 
 
