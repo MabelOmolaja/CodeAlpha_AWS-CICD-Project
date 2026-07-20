@@ -35,3 +35,13 @@ jobs:
     - name: Push Docker image
       run: |
         docker push 029247419664.dkr.ecr.us-east-1.amazonaws.com/codealpha-devops-project:latest
+  
+  - name: Deploy to EC2
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
+          cd aws-cicd-project
+          ./deploy.sh
